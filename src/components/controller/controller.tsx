@@ -19,15 +19,15 @@ function Controller() {
     setMode(!mode);
   }
 
-  function playHandler(): void {
+  function playHandler() {
     setVideoPlay(!videoPlay);
   }
 
-  function musicHandler(): void {
+  function musicHandler() {
     setMusic(!music);
   }
 
-  function bgmHandler(): void {
+  function bgmHandler() {
     setBgm(!bgm);
   }
 
