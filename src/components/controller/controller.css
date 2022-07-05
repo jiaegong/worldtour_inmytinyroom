@@ -1,19 +1,9 @@
 @font-face {
-  font-family: 'UhBeeSe_hyun';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeSe_hyun.woff')
-    format('woff');
+  font-family: "UhBeeSe_hyun";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeSe_hyun.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
-}
-
-button {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background-color: transparent;
-  border: none;
-  font-family: 'UhBeeSe_hyun';
-  font-size: 0.5rem;
 }
 
 .controller {
@@ -30,4 +20,6 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: "UhBeeSe_hyun";
+  font-size: 0.5rem;
 }
