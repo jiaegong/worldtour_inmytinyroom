@@ -4,7 +4,7 @@ import Controller from '../../components/controller/controller';
 function Trip() {
   return (
     <>
-      <div>Video</div>
+      <video src={`https://www.youtube.com/watch?v=LPgZ4lKfBPw`} autoPlay controls />
       <Controller />
     </>
   );
