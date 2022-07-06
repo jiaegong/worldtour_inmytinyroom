@@ -1,10 +1,16 @@
-import React from 'react';
-import Controller from '../../components/controller/controller';
+import React from "react";
+import Controller from "../../components/controller/controller";
+import ReactPlayer from "react-player/lazy";
 
 function Trip() {
   return (
     <>
-      <video src={`https://www.youtube.com/watch?v=LPgZ4lKfBPw`} autoPlay controls />
+      <ReactPlayer
+        url="https://www.youtube.com/watch?v=LPgZ4lKfBPw"
+        playing={true}
+        muted={true}
+        controls={true}
+      />
       <Controller />
     </>
   );
