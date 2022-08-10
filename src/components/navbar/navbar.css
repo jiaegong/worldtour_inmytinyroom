@@ -1,37 +1,37 @@
 @font-face {
-  font-family: 'UhBeeSe_hyun';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeSe_hyun.woff') format('woff');
+  font-family: "UhBeeSe_hyun";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeSe_hyun.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
-  }
-  
-  .navbar {
-    background-color: #FFFDF6;
-    height: 100px;
-    color: #463A25;
-    display: flex;
-    font-family: 'UhBeeSe_hyun';
-    font-size: 1.2rem;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  }
+}
 
-  .title-wrap {
-    display: flex;
-    align-items: center;
-    margin-left: 30px;
-  }
+.navbar {
+  background-color: #fffdf6;
+  height: 100px;
+  color: #463a25;
+  display: flex;
+  font-family: "UhBeeSe_hyun";
+  font-size: 1.2rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
 
-  .title {
-    margin-left: 20px;
-  }
+.title-wrap {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
 
-  .everywhere-wrap {
-    position: relative;
-    margin-left: 350px;
-  }
-  .everywhere-text {
-    position: absolute;
-    top: 10px;
-    left: 25px;
-  }
-  
+.title {
+  margin-left: 20px;
+}
+
+.everywhere-wrap {
+  position: relative;
+  margin-left: 350px;
+}
+.everywhere-text {
+  position: absolute;
+  top: 10px;
+  left: 25px;
+}
