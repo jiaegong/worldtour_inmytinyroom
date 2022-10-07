@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import './controller.css';
-import daymode from '../../asset/daymode.svg';
-import nightmode from '../../asset/nightmode.svg';
-import play from '../../asset/play.svg';
-import pause from '../../asset/pause.svg';
-import musicon from '../../asset/musicon.svg';
-import musicoff from '../../asset/musicoff.svg';
-import bgmon from '../../asset/bgmon.svg';
-import bgmoff from '../../asset/bgmoff.svg';
+import React, { useState } from "react";
+import "./controller.css";
+import daymode from "../../asset/daymode.svg";
+import nightmode from "../../asset/nightmode.svg";
+import play from "../../asset/play.svg";
+import pause from "../../asset/pause.svg";
+import musicon from "../../asset/musicon.svg";
+import musicoff from "../../asset/musicoff.svg";
+import bgmon from "../../asset/bgmon.svg";
+import bgmoff from "../../asset/bgmoff.svg";
 
 function Controller() {
   const [mode, setMode] = useState(true);
@@ -33,7 +33,7 @@ function Controller() {
 
   return (
     <div className="controller">
-      <button type="button" onClick={modeHandler} className="mode-controller">
+      <div onClick={modeHandler}>
         {mode ? (
           <>
             <img src={daymode} alt="daymode" />
@@ -45,8 +45,8 @@ function Controller() {
             <p>저녁 모드</p>
           </>
         )}
-      </button>
-      <button type="button" onClick={playHandler} className="video-controller">
+      </div>
+      <div onClick={playHandler}>
         {videoPlay ? (
           <>
             <img src={play} alt="play" />
@@ -58,8 +58,8 @@ function Controller() {
             <p>일시 정지</p>
           </>
         )}
-      </button>
-      <button type="button" onClick={musicHandler} className="music-controller">
+      </div>
+      <div onClick={musicHandler}>
         {music ? (
           <>
             <img src={musicon} alt="musicon" />
@@ -71,8 +71,8 @@ function Controller() {
             <p>음악 off</p>
           </>
         )}
-      </button>
-      <button type="button" onClick={bgmHandler} className="bgm-controller">
+      </div>
+      <div onClick={bgmHandler}>
         {bgm ? (
           <>
             <img src={bgmon} alt="bgmon" />
@@ -84,7 +84,7 @@ function Controller() {
             <p>배경 off</p>
           </>
         )}
-      </button>
+      </div>
     </div>
   );
 }
