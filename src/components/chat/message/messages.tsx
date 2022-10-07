@@ -18,7 +18,7 @@ export default Messages;
 const Message = memo(({ massage }: any) => {
   return (
     <div className="messages-container">
-      <h4 className="messages-nickname">닉네임</h4>
+      <h4 className="messages-nickname">{massage.nickName}</h4>
       <p className="messages-message">
         {/* 텍스트 300자 이상 작성 시, 작성불가하고 모달이 뜸/ 2초뒤 자동 사라짐 가하고 모달이 뜸/ 2초
         뒤 자동 사라짐 */}
