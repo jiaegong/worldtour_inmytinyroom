@@ -9,14 +9,12 @@ import "./App.css";
 function App() {
   return (
     <>
-       {/* <div style={{ width: "100%", height: "100vh" }}> */}
       <Navbar />
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="trip/:city" element={<Trip />} />
-        <Route path="chat" element={<ChatBox />} />
+        {/* <Route path="chat" element={<ChatBox />} /> */}
       </Routes>
-    {/* </div> */}
     </>
   );
 }

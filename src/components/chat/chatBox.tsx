@@ -66,7 +66,7 @@ const ChatBox = () => {
       return {
         ...messageContents,
         room: "Seoul",
-        message: e.target.value.trim(),
+        message: e.target.value,
       };
     });
   };

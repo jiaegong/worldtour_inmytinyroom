@@ -2,10 +2,9 @@
   "name": "worldtour_inmytinyroom",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@reduxjs/toolkit": "^1.8.3",
   "proxy": "http://13.209.17.177",
   "dependencies": {
+    "@reduxjs/toolkit": "^1.8.3",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",

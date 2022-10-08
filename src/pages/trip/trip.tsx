@@ -4,6 +4,7 @@ import { useQuery } from "react-query";
 import videoApi from "../../shared/api/videoApi";
 import ReactPlayer from "react-player/lazy";
 import { useParams } from "react-router";
+import ChatBox from "../../components/chat/chatBox";
 
 function Trip() {
   const params = useParams();
@@ -17,7 +18,7 @@ function Trip() {
   });
 
   return (
-    <>
+    <div style={{ width: "100%", height: "91vh", position: "relative" }}>
       <Controller />
       <ReactPlayer
         className="react-player"
@@ -27,7 +28,8 @@ function Trip() {
         playing={true}
         muted={true}
       />
-    </>
+      <ChatBox />
+    </div>
   );
 }
 

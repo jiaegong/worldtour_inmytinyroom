@@ -6,6 +6,16 @@
   font-style: normal;
 }
 
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  font-family: "UhBeeSe_hyun";
+  font-size: 0.5rem;
+}
+
 .controller {
   position: absolute;
   top: 120px;

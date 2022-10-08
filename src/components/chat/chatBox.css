@@ -2,10 +2,12 @@
   width: 100%;
   height: auto;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
+  position: absolute;
+  bottom: 0;
 }
 
 .chatbox-lower {
-  width: 100%;
+  width: 60%;
   display: flex;
   justify-content: space-around;
   padding: 10px 15px 20px 15px;
