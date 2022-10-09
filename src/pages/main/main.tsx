@@ -1,7 +1,8 @@
-import React from 'react';
+import React from "react";
+import Map from "../../components/map/map";
 
 function Main() {
-  return <div>Main</div>;
+  return <Map />;
 }
 
 export default Main;

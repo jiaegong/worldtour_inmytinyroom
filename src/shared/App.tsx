@@ -13,7 +13,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="trip/:city" element={<Trip />} />
-        {/* <Route path="chat" element={<ChatBox />} /> */}
       </Routes>
     </>
   );
