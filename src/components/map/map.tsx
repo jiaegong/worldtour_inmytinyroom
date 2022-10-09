@@ -100,12 +100,6 @@ export default function Map() {
       }
     );
 
-    // map.current.on("click", (e: any) => {
-    //   for (const output in e.target) {
-    //     console.log("노드 값: " + JSON.stringify(output));
-    //   }
-    // });
-
     map.current.on("click", "symbols", (e: any) => {
       console.info("A click event has occurred at " + e.lngLat);
       map.current.flyTo({
@@ -123,7 +117,13 @@ export default function Map() {
     map.current.on("mouseleave", "symbols", () => {
       map.current.getCanvas().style.cursor = "";
     });
-  }, [map.current]);
+
+    return () => {
+      map.current.off("click", "symbols");
+      map.current.off("mouseenter", "symbols");
+      map.current.off("mouseleave", "symbols");
+    };
+  });
 
   return (
     <div className="map-wrap">

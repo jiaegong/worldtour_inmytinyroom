@@ -1,13 +1,60 @@
-import React, { memo, useEffect } from "react";
+import _ from "lodash";
+import React, { memo, useEffect, useState } from "react";
 import "./messages.css";
 
 // eslint-disable-next-line react/display-name
 const Messages = memo(({ messageList }: any) => {
+  const messageBoxRef = React.useRef<HTMLDivElement>(null);
+  const messagesEndRef = React.useRef<HTMLDivElement>(null);
+
+  const [scrollState, setScrollState] = useState(true);
+
+  const scrollEvent = _.debounce(() => {
+    // 스크롤 위치
+    const scrollTop = Number(messageBoxRef.current?.scrollTop);
+    // 요소의 높이
+    const clientHeight = Number(messageBoxRef.current?.clientHeight);
+    // 스크롤의 높이
+    const scrollHeight = Number(messageBoxRef.current?.scrollHeight);
+
+    // 스크롤이 맨 아래에 있을때 true, 아닐 때 false
+    setScrollState(scrollTop + clientHeight >= scrollHeight ? true : false);
+  }, 100);
+
+  const scroll = React.useCallback(scrollEvent, []);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  React.useEffect(() => {
+    if (scrollState) {
+      scrollToBottom();
+    }
+  }, [messageList.length]);
+
+  // 스크롤 이벤트 추가
+  React.useEffect(() => {
+    messageBoxRef.current?.addEventListener("scroll", scroll);
+    return () => {
+      messageBoxRef.current?.removeEventListener("scroll", scroll);
+    };
+  });
+
   return (
-    <div className="chatbox-upper">
+    <div ref={messageBoxRef} className="chatbox-upper">
       {messageList?.map((massage: any, index: any) => (
         <Message key={index} massage={massage} />
       ))}
+      {scrollState ? (
+        <></>
+      ) : (
+        <button className="scrollToBottom" onClick={scrollToBottom}>
+          &darr;
+        </button>
+      )}
+
+      <div ref={messagesEndRef} />
     </div>
   );
 });
